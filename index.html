@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="index.css" />
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <h1 class="title">IP Address Tracker</h1>
+
+        <form action="submit" name="ip">
+          <input
+            type="text"
+            name="ipInput"
+            id="ip-input"
+            placeholder="Search for any IP address or domain"
+          />
+          <button type="submit">
+            <img src="./images/icon-arrow.svg" alt="Submit Button" />
+          </button>
+        </form>
+
+        <div class="main">
+          <div class="main-box ip-info-box">
+            <span class="main-head"> IP Address </span>
+            <span class="info-field" id="ipAddress"></span>
+          </div>
+
+          <div class="main-box location-info-box">
+            <span class="main-head"> Location </span>
+            <span class="info-field" id="location"></span>
+          </div>
+
+          <div class="main-box timezone-info-box">
+            <span class="main-head"> Timezone </span>
+            <span class="info-field" id="timezone"></span>
+          </div>
+
+          <div class="main-box isp-info-box">
+            <span class="main-head"> ISP </span>
+            <span class="info-field" id="isp"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="map"></div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
